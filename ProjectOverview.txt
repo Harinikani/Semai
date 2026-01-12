@@ -1,0 +1,68 @@
+
+## Core Features
+
+### 🐘 Wildlife Education
+- **Species Discovery** (`/animal`, `/scan`) - Identify and track wildlife
+- **Educational Content** (`/story`) - Wildlife stories and facts
+- **Learning Activities** (`/learn`, `/flash-card`, `/quiz`) - Interactive education
+- **Species Database** - Comprehensive wildlife information
+
+### 🎮 Gamified Learning
+- **Points System** (`/rewards`) - Earn and redeem points
+- **Achievements** (`/badges`) - Unlock badges and rewards
+- **Leaderboards** (`/leaderboard`) - Compete with other users
+- **Progress Tracking** - Monitor learning journey
+
+### 👥 Social & Community
+- **Friends System** (`/friends`) - Connect with other users
+- **User Profiles** (`/profile`) - Personal profiles and stats
+- **Social Features** - Share discoveries and achievements
+
+### 🔐 Authentication & Security
+- **Public Routes** (`(auth)`) - Login, register, policy pages
+- **Protected Routes** (`(app)`) - All main app features require auth
+- **Session Management** - Secure user authentication
+
+## Page Overview
+
+### Public Routes (`(auth)`)
+- **Login** - User authentication
+- **Register** - New user registration
+- **Policy** - Terms and privacy policies
+
+### Protected App Routes (`(app)`)
+- **Home/Dashboard** - Main dashboard with overview
+- **Animal** - Species information and database
+- **Scan** - Species identification and scanning
+- **Learn** - Learning hub and educational content
+- **Flash Cards** - Interactive learning cards
+- **Quiz** - Knowledge challenges and tests
+- **Story** - Wildlife stories and articles
+- **Profile** - User profile and settings
+- **Friends** - Social connections
+- **Leaderboard** - User rankings and scores
+- **Badges** - Achievements and rewards
+- **Rewards** - Points redemption shop
+
+## Component Architecture
+- **Reusable Components** (`/components`) - Shared UI components
+- **Custom Hooks** (`/hooks`) - React hooks for state management
+- **Utility Libraries** (`/lib`) - Helper functions and configs
+- **Layout System** - Consistent app structure
+
+
+## Design System
+- **Main Color**: Emerald green (conservation theme)
+- **Secondary Colors**: Purple, blue, amber for feature differentiation
+- **Mascot**: SEMAI Elephant
+- **Typography**: Clean, readable fonts
+- **Layout**: Mobile-first responsive design
+
+## Key User Flows
+1. **Onboarding** → Register/Login → Dashboard
+2. **Learning** → Learn → Flash Cards/Quiz → Earn Points
+3. **Discovery** → Scan Species → Identify → Add to Collection
+4. **Social** → Find Friends → Share Discoveries → Compete on Leaderboard
+5. **Rewards** → Earn Points → Redeem Vouchers → Unlock Badges
+
+---
