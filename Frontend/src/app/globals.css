@@ -1,0 +1,236 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-emerald-500: var(--primary);
+  --color-teal-500: var(--secondary);
+  /* --color-emerald-50: var(--card); */
+  /* --color-teal-50: var(--card-gradient); */
+  --color-text: var(--foreground);
+  --color-text-secondary: var(--muted-foreground);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+:root {
+  --radius: 0.625rem;
+  --background: oklch(1 0 0);
+  --foreground: #101828;
+  --card: #ECFDF5;
+  --card-gradient: #ecfbfd;
+  --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+  --primary: #89B7B9;
+  --primary-gradient: #c9e2e3;
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: #57c597;
+  --secondary-gradient: #f4fdf9;
+  --secondary-foreground: oklch(0.205 0 0);
+  --muted: #f5f5f5;
+  --muted-foreground: #64748B;
+  --accent: #C5E7AF;
+  --accent-foreground: oklch(0.205 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0.922 0 0);
+  --input: oklch(0.922 0 0);
+  --ring: oklch(0.708 0 0);
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: oklch(0.205 0 0);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+  --yellow: #fefce8;
+  --yellow-gradient: #fef3c7;
+  --yellow-border: #eab308;
+  --pink: #ffdbf7;
+  --pink-gradient: #fef3fc;
+  --pink-border: oklab(71.856% 0.13989 -0.05868);
+}
+
+/* .header {
+  padding: max(0.3rem, env(safe-area-inset-top)) 1rem 0rem;
+  background: linear-gradient(to right, var(--primary), var(--accent));
+  border-bottom: 1px solid #d1fae5;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+} */
+
+/* .header-content {
+  padding: 0rem 0.5rem 0rem;
+  display: flex;
+  align-items: center; */
+  /* MODIFIED: Use space-between to push the logo/spacer to the edges and center the middle item */
+  /* justify-content: space-between;  */
+  /* Removed gap: 1rem; */
+  /* max-width: 1200px;
+  margin: 0 auto;
+} */
+
+.logo-container {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  border-radius: 8px;
+  border: 1px solid #d1fae5;
+}
+
+.logo-placeholder {
+  color: #059669;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+/* NEW: Spacer element is invisible but reserves space */
+.header-spacer {
+  visibility: hidden;
+  /* It inherits the logo-container's 50px width/height */
+}
+
+.welcome-text {
+  /* MODIFIED: Center the text inside its own container */
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #000000;
+  margin: 0;
+}
+
+.user-name {
+  font-weight: 700;
+  color: #000000;
+}
+
+body {
+  background: #ffffff !important;
+  color: #171717 !important;
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+}
+
+/* Mobile app container - centers on larger screens, full width on mobile */
+.mobile-app-container {
+  max-width: 430px;
+  margin: 0 auto;
+  min-height: 100vh;
+  min-height: 100dvh; /* Dynamic viewport height for mobile browsers */
+  background: #ffffff !important;
+  position: relative;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100dvh; /* Dynamic viewport height for mobile browsers */
+  padding: 0 0px 0px;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  background: #ffffff !important;
+}
+
+/* Mobile-specific styles - adapts to any phone size */
+@media only screen and (max-width: 430px) {
+  .container {
+    padding: 1rem;
+    font-size: 16px;
+    background: #ffffff !important;
+  }
+
+  /* Layout with safe area insets for notched devices */
+  .container {
+    padding-top: 0px !important;
+    padding-bottom: max(16px, env(safe-area-inset-bottom));
+    padding-left: max(16px, env(safe-area-inset-left));
+    padding-right: max(16px, env(safe-area-inset-right));
+  }
+
+  .container > div:first-child {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+/* General mobile responsiveness */
+@media (max-width: 430px) {
+  .container {
+    padding: 0rem;
+    background: #ffffff !important;
+  }
+
+  body {
+    font-size: 16px;
+    background: #ffffff !important;
+  }
+}
+
+/* Touch-friendly interactive elements */
+/* @media (max-width: 430px) {
+  button, 
+  a, 
+  input, 
+  textarea {
+    min-height: 44px;
+  }
+} */
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
