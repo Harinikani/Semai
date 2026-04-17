@@ -1,4 +1,4 @@
-"# Semai " 
+## Semai 
 
 **1. Introduction**
 This project introduces an AI-powered wildlife education and conservation website designed specifically for mobile users interested in Malaysia’s rich biodiversity. It allows outdoor enthusiasts to take photos of plants and animals, then instantly learn about them through detailed information and cultural stories. At the same time, the platform supports conservation efforts by automatically generating reports of endangered species sightings and sending them to the appropriate authorities.
